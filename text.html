@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --divColor1: greenyellow;
+            --divColor2: rgb(182, 47, 255);
+            --divColor3: rgb(255, 238, 47);
+        }
+        div {
+            width: 400px;
+            height: 400px;
+        }
+        .color1 {
+            background-color: var(--divColor1);
+        }
+        .color2 {
+            background-color: var(--divColor2);
+        }
+        .color3 {
+            background-color: var(--divColor3);
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 3rem;
+        }
+        
+        .one {
+            display: grid;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: red;
+            grid-template-columns: repeat(3,1fr);
+            
+        }
+        .two {
+            grid-column: 2/3;
+            background-color: green;
+        }
+        .three {
+            grid-column: 2/3;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="one">
+            <div class="color1">One</div>
+            <div class="color2">One</div>
+            <div class="color3">One</div>
+        </section>
+        <section class="two">
+            <div class="color2">two</div>
+            <div class="color1">two</div>
+            <div class="color2">two</div>
+        </section>
+        <section class="three">
+            <div class="color2">Three</div>
+            <div class="color1">Three</div>
+            <div class="color3">Three</div>
+        </section>
+    </main>
+</body>
+</html>
