@@ -1,26 +1,11 @@
-def welcome():
-    print("Press 1 to register", end="\n")
-    print("Press 2 to Login", end="\n")
-    print("Press 3 to exit", end="\n")
-    option = int(input("Enter option number=>"))
-    if(option == 1):
-        print("This is registration", end="\n")
-        register()
-    elif(option == 2):
-        print("This is login", end="\n")
-        # login()
-    elif(option == 3):
-        exit(1)
-    else:
-        print("wrong option", end="\n")
-        welcome()
-
-def register():
-    email = input("Enter your email : ")
-    name = input("Enter your name : ")
-    password = input("Enter your password : ")
-
-    print(email, name, password)
+def myFun(a, b, c, *args, d, e, f):
+    print(a)
+    print(b)
+    print(c)
+    print(args)
+    print(d)
+    print(e)
+    print(f)
 
 
-welcome()
+myFun(1, 2, 3, 4, 5, 6, 7, 8, d="hehe", e=12, f=23)

@@ -1,5 +1,5 @@
 # keyword argument
 # print (standard output)
-#input (function)
+# input (function)
 data = input('please enter somethings')
-print('input value is : ',data)
+print('input value is : ', data)
